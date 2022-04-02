@@ -18,7 +18,9 @@ class FirstViewController: UIViewController {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") else {return}
         nextVC.modalPresentationStyle = .fullScreen
         nextVC.modalTransitionStyle = .coverVertical
-        self.present(nextVC,animated: true,completion: nil)
+//        self.present(nextVC,animated: true,completion: nil)
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        
     }
     
 
