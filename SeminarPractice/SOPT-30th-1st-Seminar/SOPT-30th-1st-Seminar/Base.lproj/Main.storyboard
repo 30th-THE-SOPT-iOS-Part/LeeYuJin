@@ -127,10 +127,20 @@
                                     <action selector="backButtonDidTap:" destination="Zyz-Kz-DrH" eventType="touchUpInside" id="nQb-II-A3f"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4d-Fp-zZY">
+                                <rect key="frame" x="186" y="245" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Y6-GI-f98"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
+                    <connections>
+                        <outlet property="dataLabel" destination="E4d-Fp-zZY" id="G0R-cm-3NR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pF7-59-JtN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,11 +172,20 @@
                                     <action selector="goToSecondViewController:" destination="Azb-TE-9qM" eventType="touchUpInside" id="p0Y-eo-YSE"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39a-er-L0N">
+                                <rect key="frame" x="160" y="241" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8p2-vh-MAU"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="K71-vA-1a5"/>
+                    <connections>
+                        <outlet property="dataTextField" destination="39a-er-L0N" id="mLw-8Y-BXB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UY5-0n-Yoe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

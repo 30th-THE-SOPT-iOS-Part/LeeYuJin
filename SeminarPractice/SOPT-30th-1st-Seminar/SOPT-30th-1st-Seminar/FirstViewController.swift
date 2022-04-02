@@ -9,16 +9,18 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet var dataTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     @IBAction func goToSecondViewController(_ sender: Any) {
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") else {return}
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else {return}
         nextVC.modalPresentationStyle = .fullScreen
         nextVC.modalTransitionStyle = .coverVertical
 //        self.present(nextVC,animated: true,completion: nil)
+        nextVC.message = dataTextField.text
         self.navigationController?.pushViewController(nextVC, animated: true)
         
     }
