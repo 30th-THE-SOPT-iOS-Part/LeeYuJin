@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_bg" translatesAutoresizingMaskIntoConstraints="NO" id="05A-2H-I6d">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pC4-Lk-733">
+                                <rect key="frame" x="127" y="98" width="160" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_lock" translatesAutoresizingMaskIntoConstraints="NO" id="hi6-oi-UMv">
+                                <rect key="frame" x="189" y="56" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="XaK-Sh-N4A"/>
+                                    <constraint firstAttribute="width" constant="36" id="YGE-cY-xUN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4월 9일 토요일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8G-iX-VfR">
+                                <rect key="frame" x="140.5" y="188" width="133" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pC4-Lk-733" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="54" id="1Ik-cg-rxn"/>
+                            <constraint firstItem="F8G-iX-VfR" firstAttribute="top" secondItem="pC4-Lk-733" secondAttribute="bottom" constant="6" id="4KA-Ir-Ro7"/>
+                            <constraint firstItem="05A-2H-I6d" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="6wm-jd-0EF"/>
+                            <constraint firstItem="05A-2H-I6d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Csi-EG-e79"/>
+                            <constraint firstItem="hi6-oi-UMv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="DVD-Jy-UHn"/>
+                            <constraint firstItem="pC4-Lk-733" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="bKI-et-ygf"/>
+                            <constraint firstItem="F8G-iX-VfR" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="cuK-FG-kPH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="05A-2H-I6d" secondAttribute="trailing" id="gzx-Gq-qoQ"/>
+                            <constraint firstItem="hi6-oi-UMv" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="qW1-JG-Rlb"/>
+                            <constraint firstAttribute="bottom" secondItem="05A-2H-I6d" secondAttribute="bottom" id="uxz-Zo-S9D"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icn_lock" width="36" height="36"/>
+        <image name="img_bg" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
