@@ -22,6 +22,7 @@
 		6A613142280166410048737B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A613141280166410048737B /* FirstViewController.swift */; };
 		6A613144280166570048737B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A613143280166570048737B /* SecondViewController.swift */; };
 		6A613146280173CE0048737B /* AutoLayoutPractice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A613145280173CE0048737B /* AutoLayoutPractice.storyboard */; };
+		6A61314828017C700048737B /* StackViewPractice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A61314728017C700048737B /* StackViewPractice.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		6A613141280166410048737B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		6A613143280166570048737B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		6A613145280173CE0048737B /* AutoLayoutPractice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayoutPractice.storyboard; sourceTree = "<group>"; };
+		6A61314728017C700048737B /* StackViewPractice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackViewPractice.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				6A613138280161DC0048737B /* SecondTab.storyboard */,
 				6A61313A280161E80048737B /* ThirdTab.storyboard */,
 				6A613145280173CE0048737B /* AutoLayoutPractice.storyboard */,
+				6A61314728017C700048737B /* StackViewPractice.storyboard */,
 			);
 			path = "SOPT30th-2nd-Seminar";
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				6A61313B280161E80048737B /* ThirdTab.storyboard in Resources */,
 				6A61313528015D660048737B /* TabBarPractice.storyboard in Resources */,
 				6A613146280173CE0048737B /* AutoLayoutPractice.storyboard in Resources */,
+				6A61314828017C700048737B /* StackViewPractice.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
