@@ -49,6 +49,7 @@ final class RegisterNameViewController: UIViewController {
 
     func configUI() {
         nextButton.addTarget(self, action: #selector(nextButtonClicked(_:)), for: .touchUpInside)
+        previousButton.addTarget(self, action: #selector(previousButtonClicked(_:)), for: .touchUpInside)
     }
 
     func setLayout() {
@@ -85,6 +86,10 @@ final class RegisterNameViewController: UIViewController {
         guard let nextVC = UIStoryboard(name: "RegisterPassword", bundle: nil).instantiateViewController(withIdentifier: "RegisterPasswordViewController") as? RegisterPasswordViewController else {return}
         nextVC.userName = self.userNameTextField.text ?? ""
         self.navigationController?.pushViewController(nextVC, animated: true)
+     }
+    
+    @objc private func previousButtonClicked(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
      }
     
     @objc

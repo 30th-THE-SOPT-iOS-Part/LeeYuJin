@@ -32,6 +32,8 @@ final class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
+        setLayout()
     }
 
     func configUI() {
@@ -39,6 +41,7 @@ final class WelcomeViewController: UIViewController {
     }
 
     func setLayout() {
+        self.navigationController?.isNavigationBarHidden = true
         view.addSubViews([titleLabel, subtitleLabel, completeButton])
 
         titleLabel.snp.makeConstraints {
@@ -63,7 +66,7 @@ final class WelcomeViewController: UIViewController {
     
     @objc private func completeButtonClicked(_ sender: UIButton){
        
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
      }
-    
+   
 }

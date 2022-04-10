@@ -12,6 +12,9 @@ import Then
 final class RegisterPasswordViewController: UIViewController {
 
     var userName: String?
+    private let previousButton = UIButton().then{
+        $0.setImage(UIImage(named: "icn_back_24"), for: .normal)
+    }
 
     private let titleLabel = UILabel().then {
         $0.text = "비밀번호 만들기"
@@ -37,6 +40,8 @@ final class RegisterPasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
+        setLayout()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -45,10 +50,17 @@ final class RegisterPasswordViewController: UIViewController {
 
     func configUI() {
         nextButton.addTarget(self, action: #selector(nextButtonClicked(_:)), for: .touchUpInside)
+        previousButton.addTarget(self, action: #selector(previousButtonClicked(_:)), for: .touchUpInside)
     }
 
     func setLayout() {
-        view.addSubViews([titleLabel, subTitleLabel, passwordTextField, nextButton])
+        self.navigationController?.isNavigationBarHidden = true
+        view.addSubViews([previousButton,titleLabel, subTitleLabel, passwordTextField, nextButton])
+        
+        previousButton.snp.makeConstraints{
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            $0.leading.equalToSuperview().offset(20)
+        }
 
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -75,6 +87,9 @@ final class RegisterPasswordViewController: UIViewController {
         guard let nextVC = UIStoryboard(name: "RegisterPassword", bundle: nil).instantiateViewController(withIdentifier: "RegisterPasswordViewController") as? RegisterPasswordViewController else {return}
         nextVC.userName = self.userName
         self.navigationController?.pushViewController(nextVC, animated: true)
+     }
+    @objc private func previousButtonClicked(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
      }
 
     @objc
