@@ -37,16 +37,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         $0.isEnabled = false
     }
     
-    private let signUpLabel = UILabel().then {
+    private let registerLabel = UILabel().then {
         $0.text = "계정이 없으신가요?"
         $0.textColor = .lightGray
         $0.font = .systemFont(ofSize: 15)
     }
     
-    private lazy var signUpButton = UIButton().then {
+    private lazy var  registerButton = UIButton().then {
         $0.setTitle("가입하기", for: .normal)
         $0.setTitleColor(.systemBlue, for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 17)
+        $0.titleLabel?.font = .systemFont(ofSize: 15)
         
         
     }
@@ -66,26 +66,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func setLayout() {
 
-        view.addSubViews([logoImage, emailTextField, passwordTextField, forgotPasswordButton, loginButton, signUpLabel, signUpButton])
+        view.addSubViews([logoImage, emailTextField, passwordTextField, forgotPasswordButton, loginButton, registerLabel, registerButton])
         
         logoImage.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(100)
+            $0.top.equalToSuperview().inset(150)
             $0.centerX.equalToSuperview()
         }
         
         emailTextField.snp.makeConstraints {
             $0.top.equalTo(logoImage.snp.bottom).offset(50)
-            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
         }
         
         passwordTextField.snp.makeConstraints {
-            $0.top.equalTo(emailTextField.snp.bottom).offset(10)
-            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.top.equalTo(emailTextField.snp.bottom).offset(15)
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
         
         forgotPasswordButton.snp.makeConstraints {
             $0.top.equalTo(passwordTextField.snp.bottom).offset(15)
-            $0.trailing.equalToSuperview().inset(16)
+            $0.trailing.equalToSuperview().inset(20)
         }
         
         loginButton.snp.makeConstraints {
@@ -93,13 +94,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             $0.leading.trailing.equalToSuperview().inset(16)
         }
         
-        signUpLabel.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
+        registerLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview().offset(-30)
             $0.top.equalTo(loginButton.snp.bottom).offset(20)
         }
         
-        signUpButton.snp.makeConstraints {
-            $0.centerY.equalTo(signUpLabel.snp.centerY)
+        registerButton.snp.makeConstraints {
+            $0.centerY.equalTo(signUpLabel)
             $0.leading.equalTo(signUpLabel.snp.trailing).offset(10)
         }
     }

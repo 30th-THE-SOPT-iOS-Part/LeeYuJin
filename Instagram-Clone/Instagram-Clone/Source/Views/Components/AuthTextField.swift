@@ -17,15 +17,25 @@ class AuthTextField: UITextField {
     
     init(type: textFieldType, placeHolder: String) {
         super.init(frame: .zero)
-        self.font = .systemFont(ofSize: 17)
-        self.contentVerticalAlignment = .center
-
+        setUI()
+        
         switch type{
         case .basic:
             self.placeholder = placeHolder
         case .password:
             self.isSecureTextEntry = true
             self.placeholder = placeHolder
+        }
+    }
+    
+    func setUI() {
+        self.font = .systemFont(ofSize: 17)
+        self.contentVerticalAlignment = .center
+        self.borderStyle = .roundedRect
+        self.backgroundColor = .systemGray6
+        
+        self.snp.makeConstraints{
+            $0.height.equalTo(40)
         }
     }
 
