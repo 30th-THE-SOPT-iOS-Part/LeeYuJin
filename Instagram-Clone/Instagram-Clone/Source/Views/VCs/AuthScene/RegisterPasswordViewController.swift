@@ -84,7 +84,7 @@ final class RegisterPasswordViewController: UIViewController {
     }
     @objc private func nextButtonClicked(_ sender: UIButton){
        
-        guard let nextVC = UIStoryboard(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "WelcomeViewController") as? RegisterPasswordViewController else {return}
+        guard let nextVC = UIStoryboard(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController else {return}
         nextVC.userName = self.userName
         self.navigationController?.pushViewController(nextVC, animated: true)
      }

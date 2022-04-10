@@ -34,6 +34,7 @@ final class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setLayout()
+        setTitle()
     }
 
     func configUI() {
@@ -60,8 +61,11 @@ final class WelcomeViewController: UIViewController {
         }
     }
 
-    private func setName(userName: String) {
-        titleLabel.text = "\(userName)님 Instargram에 \n 오신 것을 환영합니다"
+    private func setTitle() {
+        if let userName = self.userName{
+            titleLabel.text = "\(userName)님 Instargram에 \n 오신 것을 환영합니다"
+        }
+        
     }
     
     @objc private func completeButtonClicked(_ sender: UIButton){

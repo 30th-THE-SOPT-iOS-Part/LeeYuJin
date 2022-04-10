@@ -123,6 +123,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
     @objc private func loginButtonClicked(_ sender: UIButton){
        
         guard let nextVC = UIStoryboard(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController else {return}
+        nextVC.userName = self.emailTextField.text ?? ""
         self.navigationController?.pushViewController(nextVC, animated: true)
      }
     
