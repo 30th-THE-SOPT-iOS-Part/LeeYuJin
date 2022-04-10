@@ -83,7 +83,7 @@ final class RegisterNameViewController: UIViewController {
     }
     @objc private func nextButtonClicked(_ sender: UIButton){
        
-        guard let nextVC = UIStoryboard(name: "RegisterPassword", bundle: nil).instantiateViewController(withIdentifier: "RegisterPasswordViewController") as? RegisterPasswordViewController else {return}
+        guard let nextVC = UIStoryboard(name: "RegisterPasswordViewController", bundle: nil).instantiateViewController(withIdentifier: "RegisterPasswordViewController") as? RegisterPasswordViewController else {return}
         nextVC.userName = self.userNameTextField.text ?? ""
         self.navigationController?.pushViewController(nextVC, animated: true)
      }
