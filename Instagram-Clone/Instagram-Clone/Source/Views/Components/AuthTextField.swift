@@ -22,6 +22,7 @@ class AuthTextField: UITextField {
         switch type{
         case .basic:
             self.placeholder = placeHolder
+            self.clearButtonMode = .whileEditing
         case .password:
             self.isSecureTextEntry = true
             self.placeholder = placeHolder

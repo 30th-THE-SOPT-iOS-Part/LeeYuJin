@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+final class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +23,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    private let emailTextField = AuthTextField(type: .basic, placeHolder: "전화번호, 사용자 이름 또는 이메일")
+    private let emailTextField = AuthTextField(type: .basic, placeHolder: "전화번호, 사용자 이름 또는 이메일").then {
+        $0.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
     
-    private let passwordTextField = AuthTextField(type: .password, placeHolder: "비밀번호")
+    private let passwordTextField = AuthTextField(type: .password, placeHolder: "비밀번호").then{
+        $0.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
     
     private let forgotPasswordButton = UIButton().then {
         $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
@@ -61,7 +65,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func configUI() {
-        setTextField()
+        loginButton.addTarget(self, action: #selector(loginButtonClicked(_:)), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(registerButtonClicked(_:)), for: .touchUpInside)
     }
     
     func setLayout() {
@@ -100,21 +105,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
         registerButton.snp.makeConstraints {
-            $0.centerY.equalTo(signUpLabel)
-            $0.leading.equalTo(signUpLabel.snp.trailing).offset(10)
+            $0.centerY.equalTo(registerLabel)
+            $0.leading.equalTo(registerLabel.snp.trailing).offset(10)
         }
     }
-    
-    private func setTextField() {
-        [emailTextField, passwordTextField].forEach {
-            $0.delegate = self
-            $0.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        }
-    }
+
     
     @objc
     private func textFieldDidChange(_ sender: AuthTextField) {
-        loginButton.isEnabled = (emailTextField.hasText && passwordTextField.hasText) ? true : false
+        if (emailTextField.hasText && passwordTextField.hasText){
+            loginButton.isEnabled = true
+        }else{
+            loginButton.isEnabled = false
+        }
     }
+    
+    @objc private func loginButtonClicked(_ sender: UIButton){
+       
+        guard let nextVC = UIStoryboard(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+     }
+    
+    @objc private func registerButtonClicked(_ sender: UIButton){
+       
+        guard let nextVC = UIStoryboard(name: "RegisterName", bundle: nil).instantiateViewController(withIdentifier: "RegisterNameViewController") as? RegisterNameViewController else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+     }
+    
     
 }
