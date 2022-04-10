@@ -57,6 +57,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        eraseTextField()
     }
     
     /// 화면 터치했을 때 텍스트 필드 edit 종료하기
@@ -108,6 +109,11 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
             $0.centerY.equalTo(registerLabel)
             $0.leading.equalTo(registerLabel.snp.trailing).offset(10)
         }
+    }
+    
+    private func eraseTextField(){
+        emailTextField.text = ""
+        passwordTextField.text = ""
     }
 
     
