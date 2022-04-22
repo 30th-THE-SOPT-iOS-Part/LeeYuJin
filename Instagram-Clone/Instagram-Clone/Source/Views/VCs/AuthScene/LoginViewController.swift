@@ -119,11 +119,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @objc
     private func textFieldDidChange(_ sender: AuthTextField) {
-        if (emailTextField.hasText && passwordTextField.hasText){
-            loginButton.isEnabled = true
-        }else{
-            loginButton.isEnabled = false
-        }
+        loginButton.isEnabled = emailTextField.hasText && passwordTextField.hasText
     }
     
     @objc private func loginButtonClicked(_ sender: UIButton){

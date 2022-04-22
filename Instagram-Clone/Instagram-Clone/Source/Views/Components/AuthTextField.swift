@@ -1,9 +1,5 @@
 import UIKit
 
-enum textFieldType {
-    case basic
-    case password
-}
 
 
 class AuthTextField: UITextField {
@@ -32,6 +28,12 @@ class AuthTextField: UITextField {
             setVisibleButton()
         }
     }
+    
+    enum textFieldType {
+        case basic
+        case password
+    }
+
     
     func setUI() {
         self.font = .systemFont(ofSize: 17)
