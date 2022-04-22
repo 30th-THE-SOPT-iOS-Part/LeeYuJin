@@ -29,6 +29,12 @@ final class WelcomeViewController: UIViewController {
     }
 
     private lazy var completeButton = AuthButton(title: "완료하기")
+    
+    private lazy var  otherAccountButton = UIButton().then {
+        $0.setTitle("다른계정으로 로그인하기", for: .normal)
+        $0.setTitleColor(.accentBlue, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 14)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +45,12 @@ final class WelcomeViewController: UIViewController {
 
     func configUI() {
         completeButton.addTarget(self, action: #selector(completeButtonClicked(_:)), for: .touchUpInside)
+        otherAccountButton.addTarget(self, action: #selector(otherAccountButtonClicked(_:)), for: .touchUpInside)
     }
 
     func setLayout() {
         self.navigationController?.isNavigationBarHidden = true
-        view.addSubViews([titleLabel, subtitleLabel, completeButton])
+        view.addSubViews([titleLabel, subtitleLabel, completeButton, otherAccountButton])
 
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -59,6 +66,11 @@ final class WelcomeViewController: UIViewController {
             $0.top.equalTo(subtitleLabel.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(25)
         }
+        
+        otherAccountButton.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(completeButton.snp.bottom).offset(20)
+        }
     }
 
     private func setTitle() {
@@ -69,6 +81,12 @@ final class WelcomeViewController: UIViewController {
     }
     
     @objc private func completeButtonClicked(_ sender: UIButton){
+        guard let nextVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {return}
+       
+        self.navigationController?.pushViewController(nextVC, animated: true)
+     }
+    
+    @objc private func otherAccountButtonClicked(_ sender: UIButton){
        
         self.navigationController?.popToRootViewController(animated: true)
      }

@@ -35,7 +35,7 @@ final class RegisterPasswordViewController: UIViewController {
     }
 
     private lazy var nextButton = AuthButton(title: "다음").then {
-        $0.isEnabled = false
+        $0.isUserInteractionEnabled = false
     }
 
     override func viewDidLoad() {
@@ -58,7 +58,7 @@ final class RegisterPasswordViewController: UIViewController {
         view.addSubViews([previousButton,titleLabel, subTitleLabel, passwordTextField, nextButton])
         
         previousButton.snp.makeConstraints{
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(12)
             $0.leading.equalToSuperview().offset(20)
         }
 
@@ -95,9 +95,9 @@ final class RegisterPasswordViewController: UIViewController {
     @objc
     private func textFieldDidChange(_ sender: UITextField) {
         if passwordTextField.hasText{
-            nextButton.isEnabled = true
+            nextButton.isUserInteractionEnabled = true
         }else{
-            nextButton.isEnabled = false
+            nextButton.isUserInteractionEnabled = false
         }
     }
 }

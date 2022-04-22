@@ -37,7 +37,7 @@ final class RegisterNameViewController: UIViewController {
     }
 
     private lazy var nextButton = AuthButton(title: "다음").then {
-        $0.isEnabled = false
+        $0.isUserInteractionEnabled = false
     }
 
     override func viewDidLoad() {
@@ -57,7 +57,7 @@ final class RegisterNameViewController: UIViewController {
         
         view.addSubViews([previousButton,titleLabel, subTitleLabel, userNameTextField, nextButton])
         previousButton.snp.makeConstraints{
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(12)
             $0.leading.equalToSuperview().offset(20)
         }
 
@@ -83,7 +83,7 @@ final class RegisterNameViewController: UIViewController {
     }
     @objc private func nextButtonClicked(_ sender: UIButton){
        
-        guard let nextVC = UIStoryboard(name: "RegisterPasswordViewController", bundle: nil).instantiateViewController(withIdentifier: "RegisterPasswordViewController") as? RegisterPasswordViewController else {return}
+        guard let nextVC = UIStoryboard(name: "RegisterPassword", bundle: nil).instantiateViewController(withIdentifier: "RegisterPasswordViewController") as? RegisterPasswordViewController else {return}
         nextVC.userName = self.userNameTextField.text ?? ""
         self.navigationController?.pushViewController(nextVC, animated: true)
      }
@@ -95,9 +95,9 @@ final class RegisterNameViewController: UIViewController {
     @objc
     private func textFieldDidChange(_ sender: UITextField) {
         if userNameTextField.hasText{
-            nextButton.isEnabled = true
+            nextButton.isUserInteractionEnabled = true
         }else{
-            nextButton.isEnabled = false
+            nextButton.isUserInteractionEnabled = false
         }
     }
 }
