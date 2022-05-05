@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="207" id="KGk-i7-Jjw" customClass="MusicTableViewCell" customModule="Sopt_3rd_Seminar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="452" height="207"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="MusicTableViewCell" customModule="Sopt_3rd_Seminar" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="452" height="207"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4OC-Ia-2Mt">
+                        <rect key="frame" x="12" y="79.5" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="4OC-Ia-2Mt" secondAttribute="height" multiplier="1:1" id="n9c-ZN-wyu"/>
+                            <constraint firstAttribute="width" constant="48" id="vWv-BD-rzY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-Xc-T1T">
+                        <rect key="frame" x="74" y="84.5" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwd-81-5cI">
+                        <rect key="frame" x="74" y="107.5" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-gq-ejU">
+                        <rect key="frame" x="370" y="91.5" width="50" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="LQ2-DE-hAs"/>
+                            <constraint firstAttribute="width" constant="50" id="YNa-Y7-jtH"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="icn_menu"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dYs-gq-ejU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Lvn-X9-HV5"/>
+                    <constraint firstItem="Vwd-81-5cI" firstAttribute="top" secondItem="KfO-Xc-T1T" secondAttribute="bottom" constant="5" id="ObP-I1-QmC"/>
+                    <constraint firstItem="KfO-Xc-T1T" firstAttribute="leading" secondItem="4OC-Ia-2Mt" secondAttribute="trailing" constant="14" id="PcI-hy-plc"/>
+                    <constraint firstItem="4OC-Ia-2Mt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="R0x-a0-GmJ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dYs-gq-ejU" secondAttribute="trailing" constant="12" id="UNJ-re-6Po"/>
+                    <constraint firstItem="Vwd-81-5cI" firstAttribute="leading" secondItem="KfO-Xc-T1T" secondAttribute="leading" id="ovm-Vw-oc1"/>
+                    <constraint firstItem="4OC-Ia-2Mt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="r8z-NX-gJA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="KfO-Xc-T1T" firstAttribute="centerY" secondItem="njF-e1-oar" secondAttribute="centerY" constant="-10" id="FMF-1D-dQz"/>
+            </constraints>
+            <connections>
+                <outlet property="albumCoverImage" destination="4OC-Ia-2Mt" id="X2b-zj-9j2"/>
+                <outlet property="moveButton" destination="dYs-gq-ejU" id="64k-lj-0tF"/>
+                <outlet property="musicDescriptionLabel" destination="Vwd-81-5cI" id="4Fv-rL-KbQ"/>
+                <outlet property="musicTitleLabel" destination="KfO-Xc-T1T" id="obq-4F-hYj"/>
+            </connections>
+            <point key="canvasLocation" x="-298.55072463768118" y="-87.388392857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icn_menu" width="24" height="24"/>
+    </resources>
+</document>
