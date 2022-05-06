@@ -33,12 +33,12 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private let forgotPasswordButton = UIButton().then {
         $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
-        $0.setTitleColor(.systemBlue, for: .normal)
+        $0.setTitleColor(.accentBlue, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 13)
     }
     
     private lazy var loginButton = AuthButton(title: "로그인").then {
-        $0.isEnabled = false
+        $0.isUserInteractionEnabled = false
     }
     
     private let registerLabel = UILabel().then {
@@ -49,7 +49,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private lazy var  registerButton = UIButton().then {
         $0.setTitle("가입하기", for: .normal)
-        $0.setTitleColor(.systemBlue, for: .normal)
+        $0.setTitleColor(.accentBlue, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 15)
         
         
@@ -81,28 +81,27 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
         
         emailTextField.snp.makeConstraints {
             $0.top.equalTo(logoImage.snp.bottom).offset(50)
-            $0.leading.equalToSuperview().offset(20)
-            $0.trailing.equalToSuperview().offset(-20)
+            $0.leading.trailing.equalToSuperview().inset(16)
         }
         
         passwordTextField.snp.makeConstraints {
-            $0.top.equalTo(emailTextField.snp.bottom).offset(15)
-            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.top.equalTo(emailTextField.snp.bottom).offset(16)
+            $0.leading.trailing.equalToSuperview().inset(16)
         }
         
         forgotPasswordButton.snp.makeConstraints {
-            $0.top.equalTo(passwordTextField.snp.bottom).offset(15)
-            $0.trailing.equalToSuperview().inset(20)
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(19)
+            $0.trailing.equalToSuperview().inset(16)
         }
         
         loginButton.snp.makeConstraints {
-            $0.top.equalTo(forgotPasswordButton.snp.bottom).offset(20)
+            $0.top.equalTo(forgotPasswordButton.snp.bottom).offset(32.5)
             $0.leading.trailing.equalToSuperview().inset(16)
         }
         
         registerLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview().offset(-30)
-            $0.top.equalTo(loginButton.snp.bottom).offset(20)
+            $0.top.equalTo(loginButton.snp.bottom).offset(37.5)
         }
         
         registerButton.snp.makeConstraints {
@@ -119,7 +118,7 @@ final class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @objc
     private func textFieldDidChange(_ sender: AuthTextField) {
-        loginButton.isEnabled = emailTextField.hasText && passwordTextField.hasText
+        loginButton.isUserInteractionEnabled = emailTextField.hasText && passwordTextField.hasText
     }
     
     @objc private func loginButtonClicked(_ sender: UIButton){
