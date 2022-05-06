@@ -33,6 +33,7 @@ class TabBarController: UITabBarController {
         customTabbar.tintColor = .black
         customTabbar.unselectedItemTintColor = .black
         customTabbar.backgroundColor = UIColor.white
+        customTabbar.isTranslucent = false
         
         
         let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
@@ -85,6 +86,8 @@ class TabBarController: UITabBarController {
         selectedViewController = homeTab
     }
     
+    
+    
     override func viewDidLayoutSubviews() {
         let customTabbar = tabBar
         let tabbarY = view.getDeviceHeight()
@@ -111,4 +114,33 @@ class TabBarController: UITabBarController {
     
 }
 
+extension TabBarController {
+//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//
+//        print("clicked")
+//        switch item.image {
+//        case UIImage(named: "icn_reels"):
+//            tabBar.barStyle = .black
+//        default:
+//            tabBar.barStyle = .default
+//
+//        }
+//    }
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("selected")
+        switch item{
+        case tabBar.items?[2]:
+            tabBar.backgroundColor = .black
+            tabBar.tintColor = .white
+            tabBar.unselectedItemTintColor = .white
+            
+           
+        default:
+            tabBar.backgroundColor = .white
+            tabBar.tintColor = .black
+            tabBar.unselectedItemTintColor = .black
+        }
+       
+    }
+}
 
