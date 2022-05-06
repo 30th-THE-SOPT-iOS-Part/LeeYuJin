@@ -11,6 +11,14 @@
 		6A613158280203F10048737B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A613157280203F10048737B /* SceneDelegate.swift */; };
 		6A61315F280203F50048737B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A61315E280203F50048737B /* Assets.xcassets */; };
 		6A613162280203F50048737B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A613160280203F50048737B /* LaunchScreen.storyboard */; };
+		6A8B888628255423008A285D /* StoriesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B888428255423008A285D /* StoriesTVC.swift */; };
+		6A8B888728255423008A285D /* StoriesTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8B888528255423008A285D /* StoriesTVC.xib */; };
+		6A8B888A28255438008A285D /* StoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B888828255438008A285D /* StoryCVC.swift */; };
+		6A8B888B28255438008A285D /* StoryCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8B888928255438008A285D /* StoryCVC.xib */; };
+		6A8B888E2825544C008A285D /* FeedTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B888C2825544C008A285D /* FeedTVC.swift */; };
+		6A8B888F2825544C008A285D /* FeedTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8B888D2825544C008A285D /* FeedTVC.xib */; };
+		6A8B889328255680008A285D /* StoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B889228255680008A285D /* StoryDataModel.swift */; };
+		6A8B88952825568D008A285D /* FeedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8B88942825568D008A285D /* FeedDataModel.swift */; };
 		6A8E53DD280318980065DF93 /* RegisterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E53DC280318980065DF93 /* RegisterPasswordViewController.swift */; };
 		6A91FA232812CC7600899FDE /* UIColor++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FA222812CC7500899FDE /* UIColor++.swift */; };
 		6A91FA262812EA6300899FDE /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A91FA252812EA6300899FDE /* TabBar.storyboard */; };
@@ -38,6 +46,7 @@
 		6ABB827C28027FA900A8BED6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB827B28027FA900A8BED6 /* LoginViewController.swift */; };
 		6ABB827F2802895A00A8BED6 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB827E2802895A00A8BED6 /* AuthTextField.swift */; };
 		6ABB828128028F8A00A8BED6 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB828028028F8A00A8BED6 /* AuthButton.swift */; };
+		6AF9CC1E282542D100F30F02 /* HeaderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9CC1D282542D100F30F02 /* HeaderBarView.swift */; };
 		7EA84F1ED0E70598DFBD2661 /* Pods_Instagram_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD29CC412A28BF4BEC7EBCBC /* Pods_Instagram_Clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +58,14 @@
 		6A61315E280203F50048737B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A613161280203F50048737B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A613163280203F50048737B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A8B888428255423008A285D /* StoriesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTVC.swift; sourceTree = "<group>"; };
+		6A8B888528255423008A285D /* StoriesTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesTVC.xib; sourceTree = "<group>"; };
+		6A8B888828255438008A285D /* StoryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCVC.swift; sourceTree = "<group>"; };
+		6A8B888928255438008A285D /* StoryCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCVC.xib; sourceTree = "<group>"; };
+		6A8B888C2825544C008A285D /* FeedTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTVC.swift; sourceTree = "<group>"; };
+		6A8B888D2825544C008A285D /* FeedTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTVC.xib; sourceTree = "<group>"; };
+		6A8B889228255680008A285D /* StoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataModel.swift; sourceTree = "<group>"; };
+		6A8B88942825568D008A285D /* FeedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataModel.swift; sourceTree = "<group>"; };
 		6A8E53DC280318980065DF93 /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
 		6A91FA222812CC7500899FDE /* UIColor++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor++.swift"; sourceTree = "<group>"; };
 		6A91FA252812EA6300899FDE /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -76,6 +93,7 @@
 		6ABB827B28027FA900A8BED6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6ABB827E2802895A00A8BED6 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		6ABB828028028F8A00A8BED6 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		6AF9CC1D282542D100F30F02 /* HeaderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBarView.swift; sourceTree = "<group>"; };
 		936350992BED07CE91C487AF /* Pods-Instagram-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram-Clone.release.xcconfig"; path = "Target Support Files/Pods-Instagram-Clone/Pods-Instagram-Clone.release.xcconfig"; sourceTree = "<group>"; };
 		AD29CC412A28BF4BEC7EBCBC /* Pods_Instagram_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -119,6 +137,25 @@
 			path = "Instagram-Clone";
 			sourceTree = "<group>";
 		};
+		6A8B889128255641008A285D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A8B889228255680008A285D /* StoryDataModel.swift */,
+				6A8B88942825568D008A285D /* FeedDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A8B889628257F7B008A285D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6A8B888528255423008A285D /* StoriesTVC.xib */,
+				6A8B888928255438008A285D /* StoryCVC.xib */,
+				6A8B888D2825544C008A285D /* FeedTVC.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		6A91FA242812EA5000899FDE /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +175,9 @@
 		6AA446312812ECF700ED9924 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				6AF9CC1C2825411700F30F02 /* Components */,
 				6AA4463F2812ED9600ED9924 /* HomeViewController.swift */,
+				6AF9CC1528253F7D00F30F02 /* Cells */,
 			);
 			path = HomeScene;
 			sourceTree = "<group>";
@@ -178,6 +217,7 @@
 		6AA446412812ED9D00ED9924 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				6A8B889628257F7B008A285D /* Cells */,
 				6AA446462812EDD300ED9924 /* Home.storyboard */,
 			);
 			path = HomeScene;
@@ -218,6 +258,7 @@
 		6ABB82632802741F00A8BED6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6A8B889128255641008A285D /* Model */,
 				6ABB8268280274A500A8BED6 /* Support */,
 				6ABB82672802749600A8BED6 /* Extension */,
 				6ABB82692802751500A8BED6 /* Views */,
@@ -258,7 +299,6 @@
 		6ABB82692802751500A8BED6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6ABB826C2802755E00A8BED6 /* Components */,
 				6ABB826B2802754800A8BED6 /* VCs */,
 			);
 			path = Views;
@@ -267,11 +307,11 @@
 		6ABB826B2802754800A8BED6 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				6AA446312812ECF700ED9924 /* HomeScene */,
 				6AA446352812ED2500ED9924 /* ProfileScene */,
 				6AA446342812ED1C00ED9924 /* ShopScene */,
 				6AA446332812ED0E00ED9924 /* ReelsScene */,
 				6AA446322812ED0100ED9924 /* SearchScene */,
-				6AA446312812ECF700ED9924 /* HomeScene */,
 				6A91FA272812EA7C00899FDE /* Tabbar */,
 				6ABB827D28027FAE00A8BED6 /* AuthScene */,
 			);
@@ -325,12 +365,31 @@
 		6ABB827D28027FAE00A8BED6 /* AuthScene */ = {
 			isa = PBXGroup;
 			children = (
+				6ABB826C2802755E00A8BED6 /* Components */,
 				6ABB827B28027FA900A8BED6 /* LoginViewController.swift */,
 				6AA461162803079600C3DE9D /* RegisterNameViewController.swift */,
 				6A8E53DC280318980065DF93 /* RegisterPasswordViewController.swift */,
 				6AB6A57D28031D96001BD758 /* WelcomeViewController.swift */,
 			);
 			path = AuthScene;
+			sourceTree = "<group>";
+		};
+		6AF9CC1528253F7D00F30F02 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6A8B888428255423008A285D /* StoriesTVC.swift */,
+				6A8B888828255438008A285D /* StoryCVC.swift */,
+				6A8B888C2825544C008A285D /* FeedTVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6AF9CC1C2825411700F30F02 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6AF9CC1D282542D100F30F02 /* HeaderBarView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		86CA277C4F1B8C0387D628AB /* Pods */ = {
@@ -411,9 +470,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AA4464C2812EDF200ED9924 /* Reels.storyboard in Resources */,
+				6A8B888B28255438008A285D /* StoryCVC.xib in Resources */,
 				6AA461152803077C00C3DE9D /* RegisterName.storyboard in Resources */,
+				6A8B888728255423008A285D /* StoriesTVC.xib in Resources */,
 				6AB6A58028031F62001BD758 /* RegisterPassword.storyboard in Resources */,
 				6A613162280203F50048737B /* LaunchScreen.storyboard in Resources */,
+				6A8B888F2825544C008A285D /* FeedTVC.xib in Resources */,
 				6A61315F280203F50048737B /* Assets.xcassets in Resources */,
 				6AA4464E2812EDFC00ED9924 /* Shop.storyboard in Resources */,
 				6AA446502812EE0700ED9924 /* Profile.storyboard in Resources */,
@@ -481,18 +543,24 @@
 				6ABB8272280279CE00A8BED6 /* UIView++.swift in Sources */,
 				6ABB827F2802895A00A8BED6 /* AuthTextField.swift in Sources */,
 				6AA461172803079600C3DE9D /* RegisterNameViewController.swift in Sources */,
+				6AF9CC1E282542D100F30F02 /* HeaderBarView.swift in Sources */,
 				6ABB827828027C0F00A8BED6 /* UIScreen++.swift in Sources */,
 				6ABB827428027A2500A8BED6 /* UITextField++.swift in Sources */,
 				6A613156280203F10048737B /* AppDelegate.swift in Sources */,
+				6A8B889328255680008A285D /* StoryDataModel.swift in Sources */,
+				6A8B888E2825544C008A285D /* FeedTVC.swift in Sources */,
 				6A91FA232812CC7600899FDE /* UIColor++.swift in Sources */,
 				6AB6A57E28031D96001BD758 /* WelcomeViewController.swift in Sources */,
 				6A91FA292812EAB600899FDE /* TabBarController.swift in Sources */,
 				6AA4463E2812ED8A00ED9924 /* SearchViewController.swift in Sources */,
 				6AA446392812ED6A00ED9924 /* ShopViewController.swift in Sources */,
+				6A8B888628255423008A285D /* StoriesTVC.swift in Sources */,
 				6AA4463B2812ED7500ED9924 /* ReelsViewController.swift in Sources */,
 				6AA446372812ED5C00ED9924 /* ProfileViewController.swift in Sources */,
+				6A8B888A28255438008A285D /* StoryCVC.swift in Sources */,
 				6A613158280203F10048737B /* SceneDelegate.swift in Sources */,
 				6AA46113280304F600C3DE9D /* NavigationBarView.swift in Sources */,
+				6A8B88952825568D008A285D /* FeedDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
