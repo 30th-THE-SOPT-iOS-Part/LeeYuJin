@@ -11,7 +11,7 @@ class AuthTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     private lazy var visibleButton = UIButton().then{
-        $0.setImage(UIImage(named: "password hidden eye icon"), for: .normal)
+        $0.setImage(UIImage(named: "icn_password_hidden"), for: .normal)
     }
     
     init(type: textFieldType, placeHolder: String) {
@@ -36,10 +36,14 @@ class AuthTextField: UITextField {
 
     
     func setUI() {
-        self.font = .systemFont(ofSize: 17)
+        self.font = .systemFont(ofSize: 14)
         self.contentVerticalAlignment = .center
-        self.borderStyle = .roundedRect
-        self.backgroundColor = .systemGray6
+        self.backgroundColor = .textfieldFill
+        self.layer.borderColor = UIColor.textfieldStroke.cgColor
+        self.layer.borderWidth = 1.0
+        self.layer.cornerRadius = 8
+        
+        self.addLeftPadding(width: 10)
         
         self.snp.makeConstraints{
             $0.height.equalTo(40)
@@ -50,8 +54,12 @@ class AuthTextField: UITextField {
         self.addRightPadding(width: 30)//버튼이 가려지지 않게 오른쪽 패딩 추가
         
         self.addSubview(visibleButton)
+        
+        self.snp.makeConstraints{
+            $0.height.equalTo(44)
+        }
         visibleButton.snp.makeConstraints{
-            $0.trailing.equalToSuperview().offset(-10)
+            $0.trailing.equalToSuperview().offset(-12)
             $0.centerY.equalToSuperview()
             $0.width.height.equalTo(20)
         }
@@ -64,9 +72,9 @@ class AuthTextField: UITextField {
         isSecureTextEntry.toggle()
         switch isSecureTextEntry{
         case true:
-            visibleButton.setImage(UIImage(named: "password hidden eye icon"), for: .normal)
+            visibleButton.setImage(UIImage(named: "icn_password_hidden"), for: .normal)
         case false:
-            visibleButton.setImage(UIImage(named: "password shown eye icon"), for: .normal)
+            visibleButton.setImage(UIImage(named: "icn_password_shown"), for: .normal)
         }
         
      }

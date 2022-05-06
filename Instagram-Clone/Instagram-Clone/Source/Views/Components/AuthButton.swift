@@ -21,13 +21,31 @@ class AuthButton: UIButton {
         super.init(frame: .zero)
         setUI(title: title)
     }
+    override var isUserInteractionEnabled: Bool {
+           didSet {
+               if isUserInteractionEnabled {
+                   if #available(iOS 15.0, *) {
+                       self.configuration?.baseBackgroundColor = .accentBlue
+                       
+                   }else{
+                       self.backgroundColor = .accentBlue
+                   }
+               }
+               else {
+                   if #available(iOS 15.0, *) {
+                       self.configuration?.baseBackgroundColor = .accentLightBlue
+                   }else{
+                       self.backgroundColor = .accentLightBlue
+                   }
+               }
+           }
+    }
     
     private func setUI(title: String) {
         
         if #available(iOS 15.0, *) {//iOS 15 이상은 Configuration 이용해서 버튼 설정
             var configuration = UIButton.Configuration.filled()
-            
-            configuration.baseBackgroundColor = .systemBlue
+            configuration.baseBackgroundColor = .accentBlue
             configuration.baseForegroundColor = .white
             var attText = AttributedString(title)
             attText.font = .systemFont(ofSize: 16)
@@ -35,7 +53,7 @@ class AuthButton: UIButton {
             configuration.background.cornerRadius = 6
             self.configuration = configuration
         } else {//iOS 15 이전 버전은 Configuration이 없으므로 이전의 방식으로 버튼 설정
-            backgroundColor = .systemBlue
+            backgroundColor = .accentBlue
             setTitleColor(.white, for: .normal)
             setTitle(title, for: .normal)
             titleLabel?.font = .systemFont(ofSize: 16)
