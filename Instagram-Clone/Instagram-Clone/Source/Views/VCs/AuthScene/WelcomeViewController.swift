@@ -43,12 +43,12 @@ final class WelcomeViewController: UIViewController {
         setTitle()
     }
     
-    func configUI() {
+    private func configUI() {
         completeButton.addTarget(self, action: #selector(completeButtonClicked(_:)), for: .touchUpInside)
         otherAccountButton.addTarget(self, action: #selector(otherAccountButtonClicked(_:)), for: .touchUpInside)
     }
     
-    func setLayout() {
+    private func setLayout() {
         self.navigationController?.isNavigationBarHidden = true
         view.addSubViews([titleLabel, subtitleLabel, completeButton, otherAccountButton])
         
